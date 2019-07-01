@@ -9,7 +9,14 @@
 
   function inputHandler(event) {
     const inputValue = event.target.value;
-    const exisitingValues = ['google.com', "google.ocm/hello"];
+    const exisitingValues = [
+      'India',
+      'Bread',
+      'Butter',
+      'Gaming',
+      'Assassin\'s Creed',
+      'All Have Faith'
+    ];
 
     const suggestions = exisitingValues.filter(item => item.toLowerCase().startsWith(inputValue.toLowerCase()));
 
