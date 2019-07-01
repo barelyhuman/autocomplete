@@ -1,13 +1,16 @@
 (function () {
 
-  const autocompleteWrapper = document.querySelector('.autocomplete');
-  const autocompleteBackground = autocompleteWrapper.querySelector('.autocomplete-background');
-  const autocompleteInput = autocompleteWrapper.querySelector('.autocomplete-input');
+  const autocompleteWrapper = document.querySelectorAll('.autocomplete');
 
-  autocompleteInput.addEventListener('keyup', inputHandler);
+  autocompleteWrapper.forEach(wrapper => {
+    const autocompleteInput = wrapper.querySelector('.autocomplete-input');
+
+    autocompleteInput.addEventListener('keyup', (event) => inputHandler(event, wrapper));
+  });
 
 
-  function inputHandler(event) {
+  function inputHandler(event, wrapper) {
+    const autocompleteBackground = wrapper.querySelector('.autocomplete-background');
     const inputValue = event.target.value;
     const exisitingValues = [
       'India',
@@ -39,10 +42,6 @@
 
 
   }
-
-
-
-
 
 
 

@@ -48,3 +48,31 @@
   line-height: 40px;
   outline: none;
 }
+
+.autocomplete.black-theme {
+  background: black;
+  border-radius: 6px;
+  box-shadow: 0px 5px 5px 0px rgba(0, 0, 0, 0.12);
+}
+
+.autocomplete.black-theme .autocomplete-input {
+  color: white;
+}
+
+.autocomplete.black-theme .autocomplete-background::after {
+  color: #555;
+}
+
+.autocomplete.bordered-theme {
+  background: transparent;
+  border-radius: 6px;
+  border: 2px solid #333;
+}
+
+.autocomplete.bordered-theme .autocomplete-input {
+  color: #333;
+}
+
+.autocomplete.bordered-theme .autocomplete-background::after {
+  color: #888;
+}
