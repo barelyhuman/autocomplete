@@ -1,0 +1,50 @@
+.container {
+  height: 100vh;
+}
+
+.autocomplete {
+  position: relative;
+  box-sizing: border-box;
+  top: 50%;
+  left: 50%;
+  width: 550px;
+  padding: 10px;
+  height: 60px;
+  transform: translate(-50%, -50%);
+  border: none;
+}
+
+.autocomplete-background {
+  font-family: sans-serif;
+  display: inline-block;
+  position: absolute;
+  color: transparent;
+}
+
+.autocomplete-background::after {
+  content: attr(data-autocomplete);
+  color: #dee3e3;
+}
+
+.autocomplete-input {
+  background: transparent;
+  position: absolute;
+  color: #5c6b6b;
+  border: none;
+  outline: none;
+}
+
+.autocomplete-input,
+.autocomplete-background,
+.autocomplete-background::after {
+  font-family: sans-serif;
+  font-weight: 300;
+  font-size: 35px;
+  box-sizing: border-box;
+  background-color: transparent;
+  border: none;
+  padding: 0;
+  font-size: 34px;
+  line-height: 40px;
+  outline: none;
+}
